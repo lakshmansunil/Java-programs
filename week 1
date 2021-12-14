@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class employee
+ {
+   String name;
+   int sal;
+   int w;
+   int id;
+   void getinfo()
+   {
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter id");
+    id=s.nextInt();
+    System.out.println("enter name");
+    name=s.next();
+    System.out.println("enter salary");
+    sal=s.nextInt();
+    System.out.println("enter no.of hours worked");
+    w=s.nextInt();
+   }
+   void addsal()
+   {
+    if(sal<500)
+    {
+     sal=sal+10;
+    }
+    System.out.println("Salary if current salary is less than 500="+sal);
+   }
+   void addwork()
+   {
+    if(w>6)
+    {
+     sal=sal+5;
+    }
+    System.out.println("Salary if work is greater than 6 hours="+sal);
+   }
+ }
+public class Main
+{
+ public static void main(String args[])
+ {
+  Scanner in=new Scanner(System.in);
+  employee obj=new employee();
+  obj.getinfo();
+  obj.addsal();
+  obj.addwork();
+ }
+}
